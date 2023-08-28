@@ -42,14 +42,14 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/about': 'd4a1144bfbc244eb8ac52329568eebce',
-  //   '/projects': '0d7972919e3249d8aa3086359cec77ea',
-  //   '/notes': '11e66bbb35914f98b07f1f88b8d6b70f',
-  //   '/blogs': 'c0eb23dedef64a0a946e32271b2b7258'
-  //   // '/papers': '7c4db8134d634c229a044c69cef8b8c9'
-  // },
-  pageUrlOverrides: null,
+  pageUrlOverrides: {
+    '/about': 'd4a1144bfbc244eb8ac52329568eebce',
+    '/projects': '0d7972919e3249d8aa3086359cec77ea',
+    '/notes': '11e66bbb35914f98b07f1f88b8d6b70f',
+    '/blogs': 'c0eb23dedef64a0a946e32271b2b7258'
+    // '/papers': '7c4db8134d634c229a044c69cef8b8c9'
+  },
+  // pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
