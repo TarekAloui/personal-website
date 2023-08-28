@@ -55,6 +55,7 @@ export default siteConfig({
   // important pages
   //nimport { author } from './lib/config';
   //navigationStyle: 'default',
+  includeNotionIdInUrls: true,
   navigationStyle: 'custom',
   navigationLinks: [
     {
