@@ -9,8 +9,8 @@ export default siteConfig({
   rootNotionSpaceId: 'tarekaloui',
 
   // basic site info (required)
-  name: 'Tarek Aloui',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
+  name: 'DerekWithT',
+  domain: 'derekwitht.com',
   author: 'Tarek Aloui',
 
   // open graph metadata (optional)
@@ -47,7 +47,7 @@ export default siteConfig({
     '/projects': '0d7972919e3249d8aa3086359cec77ea',
     '/notes': '11e66bbb35914f98b07f1f88b8d6b70f',
     '/blogs': 'c0eb23dedef64a0a946e32271b2b7258',
-    '/papers': '7c4db8134d634c229a044c69cef8b8c9',
+    '/papers': '7c4db8134d634c229a044c69cef8b8c9'
   },
   //pageUrlOverrides: null,
 
@@ -72,10 +72,10 @@ export default siteConfig({
     {
       title: 'Blogs',
       pageId: 'c0eb23dedef64a0a946e32271b2b7258'
-    }, 
+    },
     {
       title: 'Papers',
       pageId: '7c4db8134d634c229a044c69cef8b8c9'
-    },
+    }
   ]
 })
