@@ -1,3 +1,5 @@
+import { tr } from 'date-fns/locale'
+
 import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
@@ -55,7 +57,7 @@ export default siteConfig({
   // important pages
   //nimport { author } from './lib/config';
   //navigationStyle: 'default',
-
+  includeNotionIdInUrls: true,
   navigationStyle: 'custom',
   navigationLinks: [
     {
