@@ -6,11 +6,11 @@ export default siteConfig({
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
-  rootNotionSpaceId: 'tarekaloui',
+  rootNotionSpaceId: '',
 
   // basic site info (required)
   name: 'DerekWithT',
-  domain: 'derekwitht.com',
+  domain: 'tarekaloui.notion.site',
   author: 'Tarek Aloui',
 
   // open graph metadata (optional)
