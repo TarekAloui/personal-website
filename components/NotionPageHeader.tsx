@@ -33,10 +33,31 @@ const ToggleThemeButton = () => {
   )
 }
 
+const useWindowWide = (size) => {
+  const [width, setWidth] = React.useState(0)
+
+  React.useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [setWidth])
+
+  return width > size
+}
+
 export const NotionPageHeader: React.FC<{
   block: types.CollectionViewPageBlock | types.PageBlock
 }> = ({ block }) => {
   const { components, mapPageUrl } = useNotionContext()
+  const wideScreen = useWindowWide(600)
 
   if (navigationStyle === 'default') {
     return <Header block={block} />
@@ -45,9 +66,13 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
+        {wideScreen && <Breadcrumbs block={block} rootOnly={true} />}
 
-        <div className='notion-nav-header-rhs breadcrumbs'>
+        <div
+          className={`${
+            wideScreen ? '' : 'notion-nav-header-center'
+          } notion-nav-header-rhs breadcrumbs`}
+        >
           {navigationLinks
             ?.map((link, index) => {
               if (!link.pageId && !link.url) {
